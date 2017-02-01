@@ -19,7 +19,7 @@ body {
 }
 
 body * {
-  font-family: "Exo 2", "Lato", "Helvetica Neue", sans-serif;
+  font-family: "Exo 2", "Lato", "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
 }
 
 h1, h2, h3, h4, h5 {
@@ -274,7 +274,7 @@ bento:before {
 }
 
 .editor * {
-  font-family: menlo,monospace;
+  font-family: menlo,"PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", monospace;
   font-size: 14px;
   line-height: 150%;
   padding: 0;
@@ -318,7 +318,7 @@ bento:before {
   position: absolute;
   top: 0;
   left: 0;
-  font-family: menlo, monospace;
+  font-family: menlo, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", monospace;
   padding: 10px 10px;
   height: 100%;
   line-height: 150%;
@@ -340,7 +340,7 @@ bento:before {
 }
 
 .editor input {
-  font-family: menlo, monospace;
+  font-family: menlo, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", monospace;
   color: #333;
   border: none;
   width: calc(100% - 44px);
@@ -717,7 +717,7 @@ orange {
   padding: 3px 6px 3px 6px;
   margin: 0px 2px;
   font-size: 13px;
-  font-family: menlo,monospace;
+  font-family: menlo,"PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", monospace;
   font-weight: normal;
 }
 
@@ -736,7 +736,7 @@ orange {
   padding: 14px 20px 14px 20px;
   font-size: 24px;
   border: solid 1px #DDD;
-  font-family: menlo, monospace;
+  font-family: menlo, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", monospace;
   display: inline-block;
   display: none;
   color: #666;
@@ -808,7 +808,7 @@ plate orange:nth-last-child(4)
 }
 
 .markup * {
-  font-family: menlo,monospace;
+  font-family: menlo,"PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", monospace;
   cursor: default;
 }
 
@@ -1149,7 +1149,7 @@ plate orange:nth-last-child(4)
 .note pre {
   background: #DDD;
   padding: 10px;
-  font-family: menlo, monospace;
+  font-family: menlo, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", monospace;
   margin: 0;
   font-size: 14px;
 }
@@ -1264,7 +1264,7 @@ tag:after {
 }
 
 .nametag {
-  font-family: "Satisfy", sans-serif;
+  font-family: "Satisfy", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   position: absolute;
   bottom: -14px;
   color: black;
