@@ -476,14 +476,14 @@ var levels = [
     `
   },
   {
-    selectorName: "Only of Type Selector",
-    helpTitle: "Select elements that are the only ones of their type within of their parent element",
+    selectorName: "类型选择器（Only of Type Selector）",
+    helpTitle: "选择是唯一的元素是否为父元素内的类型Select elements that are the only ones of their type within of their parent element",
     selector : "apple:only-of-type",
     syntax: ":only-of-type",
-    doThis : "Select the apple on the middle plate",
-    help : "Selects the only element of its type within another element.",
+    doThis : "选择在盘子（plate）中的苹果（apple）",
+    help : "选择一个元素中的另一个类型元素.",
     examples : [
-      '<strong>p span:only-of-type</strong> selects a <tag>span</tag> within any <tag>p</tag> if it is the only <tag>span</tag> in there.'
+      '<strong>p span:only-of-type</strong> 查找<tag>span</tag> 在任何 <tag>p</tag> 如果它是唯一的 <tag>span</tag> 在那里.'
     ],
     boardMarkup: `
     <plate id="fancy">
@@ -499,15 +499,15 @@ var levels = [
     `
   },
   {
-    selectorName: "Last of Type Selector",
-    helpTitle: "Select the last element of a specific type",
-    doThis : "Select the last apple and orange",
+    selectorName: "最终类型选择器（Last of Type Selector）",
+    helpTitle: "查找该类型元素的最后一个",
+    doThis : "查找着后一个苹果（apple）和橘子（orange）",
     selector : ".small:last-of-type",
     syntax: ":last-of-type",
-    help : "Selects each last element of that type within another element. Remember type refers the kind of tag, so <tag>p</tag> and <tag>span</tag> are different types. <br><br> I wonder if this is how the last dinosaur was selected before it went extinct.",
+    help : "查找该类型元素的最后一个.记得一个类型是一个标签(tag),所以 <tag>p</tag> 和 <tag>span</tag> 是不同类型. <br><br>我知道这如果它是这个类型的最后一个那么它将会被选中.",
     examples : [
-      '<strong>div:last-of-type</strong> selects the last <tag>div</tag> in every element.',
-      '<strong>p span:last-of-type</strong> selects the last <tag>span</tag> in every <tag>p</tag>.'
+      '<strong>div:last-of-type</strong>选择最后一个 <tag>div</tag> 中的元素.',
+      '<strong>p span:last-of-type</strong> 选择最后一个 <tag>span</tag> 中的每一个 <tag>p</tag>.'
     ],
     boardMarkup : `
     <orange class="small"/>
@@ -519,14 +519,14 @@ var levels = [
     `
   },
   {
-    selectorName: "Empty Selector",
-    helpTitle: "Select elements that don't have children",
-    doThis : "Select the empty bentos",
+    selectorName: "空选择器（Empty Selector）",
+    helpTitle: "查找所有没有孩子的元素",
+    doThis : "查找全部孩子为空的便当(bento)",
     selector : "bento:empty",
     syntax: ":empty",
-    help : "Selects elements that don't have any other elements inside of them.",
+    help : "查找所有元素里面没有任何其他元素在内.",
     examples : [
-      '<strong>div:empty</strong> selects all empty <tag>div</tag> elements.'
+      '<strong>div:empty</strong> 查找所有内部为空 <tag>div</tag> 元素.'
     ],
     boardMarkup:`
     <bento/>
@@ -537,16 +537,16 @@ var levels = [
     <bento/>`
   },
   {
-    selectorName: "Negation Pseudo-class",
-    helpTitle: "Select all elements that don't match the negation selector",
-    doThis : "Select the big apples",
+    selectorName: "否定伪类选择器(Negation Pseudo-class)",
+    helpTitle: "选择所有否定的不匹配选择器的元素",
+    doThis : "查找所有大苹果（apple）",
     selector : "apple:not(.small)",
     syntax: ":not(X)",
-    help : 'You can use this to select all elements that do not match selector <strong>"X"</strong>.',
+    help : '你可以实用这个去查找所有元素中不匹配的选择器<strong>"X"</strong>.',
     examples : [
-      '<strong>:not(#fancy)</strong> selects all elements that do not have <strong>id="fancy"</strong>.',
-      '<strong>div:not(:first-child)</strong> selects every <tag>div</tag> that is not a first child.',
-      '<strong>:not(.big, .medium)</strong> selects all elements that do not have <strong>class="big"</strong> or <strong>class="medium"</strong>.'
+      '<strong>:not(#fancy)</strong> 查找所有元素没有<strong>id="fancy"</strong>的属性.',
+      '<strong>div:not(:first-child)</strong> 选择每一个div <tag>div</tag> 排除掉不是第一个子元素（first child）.',
+      '<strong>:not(.big, .medium)</strong> 查找所有元素class中没有<strong>class="big"</strong> 或者 <strong>class="medium"</strong>.'
     ],
     boardMarkup: `
     <plate id="fancy">
@@ -563,15 +563,15 @@ var levels = [
     `
   },
   {
-    selectorName: "Attribute Selector",
-    helpTitle: "Select all elements that have a specific attribute",
-    doThis : "Select the items for someone",
+    selectorName: "属性选择器（Attribute Selector）",
+    helpTitle: "查找所有元素是否有特定属性名",
+    doThis : "查找所有属性名为 for 的物品",
     selector : "[for]",
     syntax: "[attribute]",
-    help : 'Attributes appear inside the opening tag of an element, like this: <tag>span attribute="value"</tag>. An attribute does not always have a value, it can be blank!',
+    help : '属性是出现在元素(element)中的一个标签(tag),就像这样:<tag>span attribute="value"</tag>.并不总是一个属性有一个值,它可以是空白!',
     examples : [
-      '<strong>a[href]</strong> selects all <tag>a</tag> elements that have a <strong>href="anything"</strong> attribute.',
-      '<strong>[type]</strong> selects all elements that have a <strong>type="anything"</strong>. attribute'
+      '<strong>a[href]</strong> 查找所有 <tag>a</tag> 标签元素它有一个 <strong>href="anything"</strong> 的属性值.',
+      '<strong>[type]</strong> 查找所有元素它有一个 <strong>type="anything"</strong>的属性.'
     ],
     boardMarkup:`
     <bento><apple class="small"/></bento>
@@ -581,16 +581,16 @@ var levels = [
     <pickle/>`
   },
   {
-    selectorName: "Attribute Selector",
-    helpTitle: "Select all elements that have a specific attribute",
-    doThis : "Select the plates for someone",
+    selectorName: "属性选择器(Attribute Selector)",
+    helpTitle: "查找所有元素是否有特定属性名",
+    doThis : "查找所有盘子(plate)是否有 for 属性名",
     selector : "plate[for]",
     syntax: "A[attribute]",
-    help : "Combine the attribute selector with another selector (like the tag name selector) by adding it to the end.",
+    help : "结合元素名字和属性的名字(就像标签名选择器(tag name selector))加入到它的最后.",
     examples : [
-      '<strong>[value]</strong> selects all elements that have a <strong>value="anything"</strong> attribute.',
-      '<strong>a[href]</strong> selects all <tag>a</tag> elements that have a <strong>href="anything"</strong> attribute.',
-      '<strong>input[disabled]</strong> selects all <tag>input</tag>strong> elements with the <strong>disabled</strong> attribute'
+      '<strong>[value]</strong> 查找所有元素有一个 <strong>value="anything"</strong> 的属性.',
+      '<strong>a[href]</strong> 查找所有 <tag>a</tag> 标签元素它有一个 <strong>href="anything"</strong> 的属性.',
+      '<strong>input[disabled]</strong> 查找所有 <tag>input</tag>标签是否有 <strong>disabled</strong> 属性'
     ],
     boardMarkup:`
     <plate for="Sarah"><pickle/></plate>
@@ -600,14 +600,14 @@ var levels = [
     `
   },
   {
-    selectorName: "Attribute Value Selector",
-    helpTitle: "Select all elements that have a specific attribute value",
-    doThis : "Select Vitaly's meal",
+    selectorName: "属性值选择器(Attribute Value Selector)",
+    helpTitle: "选择所有元素属性值相等的元素Select all elements that have a specific attribute value",
+    doThis : "查找所有Vitaly的食品Select Vitaly's meal",
     selector : "[for=Vitaly]",
     syntax: '[attribute="value"]',
-    help : "Attribute selectors are case sensitive, each character must match exactly.",
+    help : "属性选择器是一个大小写敏感, 内容完全匹配的选择器.",
     examples : [
-      '<strong>input[type="checkbox"]</strong> selects all checkbox input elements.'
+      '<strong>input[type="checkbox"]</strong> 查找所有输入(input)为复选框(checkbox)的元素.'
     ],
     boardMarkup:`
     <apple for="Alexei" />
@@ -617,14 +617,14 @@ var levels = [
     `
   },
   {
-    selectorName: "Attribute Starts With Selector",
-    helpTitle: "Select all elements with an attribute value that starts with specific characters",
-    doThis : "Select the items for names that start with 'Sa'",
+    selectorName: "属性起始选择器(Attribute Starts With Selector)",
+    helpTitle: "查找所有对应元素中的属性值的开始是否包含特定字符的元素",
+    doThis : "查找元素中for属性名内容起始为'Sa'的元素",
     selector : '[for^="Sa"]',
     syntax: '[attribute^="value"]',
     // help : "You can use quotes around the value in the selector, or not&mdash;it's optional!",
     examples : [
-      '<strong>.toy[category^="Swim"]</strong> selects elements with class <strong>toy</strong> and either <strong>category="Swimwear</strong> or <strong>category="Swimming"</strong>.'
+      '<strong>.toy[category^="Swim"]</strong> 选择所有元素 class为 <strong>toy</strong> 和它的属性 <strong>category="Swimwear</strong> 或者 <strong>category="Swimming"</strong>.'
     ],
     boardMarkup: `
     <plate for="Sam"><pickle/></plate>
@@ -633,14 +633,14 @@ var levels = [
     `
   },
   {
-    selectorName: "属性结尾选择器",
-    helpTitle: "查找所有节点中的一个属性的内容匹配它对应的文件名结尾",
-    doThis : "查找列表中for属性名结尾为'ato'的节点",
+    selectorName: "属性结尾选择器(Attribute Ends With Selector)",
+    helpTitle: "查找所有对应元素中的属性值的结尾是否包含特定字符的元素",
+    doThis : "查找元素中for属性名内容结尾为'ato'的元素",
     selector : '[for$="ato"]',
     syntax: '[attribute$="value"]',
     help : '',
     examples : [
-      '<strong>img[src$=".jpg"]</strong> 查找所有图片中结尾显示为  <strong>.jpg</strong> 的图片.',
+      '<strong>img[src$=".jpg"]</strong> 显示查找所有图片中结尾为  <strong>.jpg</strong> 的图片.',
     ],
     boardMarkup:`
     <apple class="small"/>
@@ -651,15 +651,15 @@ var levels = [
     `
   },
   {
-    selectorName: "Attribute Wildcard Selector",
-    helpTitle: "Select all elements with an attribute value that contains specific characters anywhere",
+    selectorName: "属性通配符选择器(Attribute Wildcard Selector)",
+    helpTitle: "查找所有对应元素中的属性值是否包含特定字符的元素",
     syntax: '[attribute*="value"]',
-    doThis : "Select the meals for names that contain 'obb'",
+    doThis : "查找所有元素和属性名内容中包含'obb'字符",
     selector : '[for*="obb"]',
-    help : 'A useful selector if you can identify a common pattern in things like <strong>class</strong>, <strong>href</strong> or <strong>src</strong> attributes.',
+    help : '如果属性选择器中有attribute*它能够去识别像 <strong>class</strong>, <strong>href</strong> 或者 <strong>src</strong> 的属性.',
     examples : [
-      '<strong>img[src*="/thumbnails/"]</strong> selects all image selements that show images from the "thumbnails" folder.',
-      '<strong>[class*="heading"]</strong> selects all elements with "heading" in their class, like <strong>class="main-heading"</strong> and <strong>class="sub-heading"</strong>'
+      '<strong>img[src*="/thumbnails/"]</strong> 查找所有的img元素显示图片路径的来自"thumbnails"的文件.',
+      '<strong>[class*="heading"]</strong> 查找所有元素中class值为为"heading",像 <strong>class="main-heading"</strong> 和 <strong>class="sub-heading"</strong>'
     ],
     boardMarkup:`
     <bento for="Robbie"><apple /></bento>
