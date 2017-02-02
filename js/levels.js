@@ -75,7 +75,7 @@ var levels = [
     syntax: "#id&nbsp;&nbsp;A",
     help : '后代选择器可以用来结合任意选择器。',
     examples : [
-      '<strong>#cool&nbsp;span</strong> 选择具有 <strong>id="cool"</strong> 这个属性的元素中，的所有 <tag>span</tag> 元素。'
+      '<strong>#cool&nbsp;span</strong> 选择具有 <strong>id="cool"</strong> 这个属性的元素中的所有 <tag>span</tag> 元素。'
     ],
     boardMarkup : `
     <bento>
@@ -225,15 +225,15 @@ var levels = [
     </plate>`
   },
   {
-    doThis : "Select every apple that's next to a plate",
+    doThis : "选中所有紧随“盘子”(plate)之后“苹果”(apple)",
     selector : "plate + apple",
-    helpTitle: "Select an element that directly follows another element",
-    selectorName: "相邻兄弟选择器",
+    helpTitle: "选择紧随某元素之后的元素",
+    selectorName: "相邻兄弟选择器(Adjacent Sibling Selector)",
     syntax : "A + B",
-    help : "This selects all <strong>B</strong> elements that directly follow <strong>A</strong>. Elements that follow one another are called siblings. They're on the same level, or depth. <br/><br/>In the HTML markup for this level, elements that have the same indentation are siblings.",
+    help : "这个选择器选择所有紧随 <strong>A</strong> 之后的 <strong>B</strong> 元素。彼此紧靠的元素互为兄弟(sibling)，它们的层级（或在 DOM 树中的深度）是相同的。 <br/><br/>在这个关卡的 HTML 标记中，缩进层级相同的元素互为兄弟元素。",
     examples : [
-      '<strong>p + .intro</strong> selects every element with <strong>class="intro"</strong> that directly follows a <tag>p</tag>',
-      '<strong>div + a</strong> selects every <tag>a</tag> element that directly follows a <tag>div</tag>'
+      '<strong>p + .intro</strong> 选择所有紧随 <tag>p</tag> 元素之后的，并且具有 <strong>class="intro"</strong> 这个属性的元素。',
+      '<strong>div + a</strong> 选择所有紧随 <tag>div</tag> 元素之后的 <tag>a</tag> 元素。'
     ],
     boardMarkup : `
     <bento>
