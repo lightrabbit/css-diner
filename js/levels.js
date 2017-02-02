@@ -1,7 +1,7 @@
 var levels = [
   {
     helpTitle : "根据类型(type)来选择元素(element)",
-    selectorName : "类型选择器",
+    selectorName : "类型选择器(Type Selector)",
     doThis : "选中这些“盘子”(plate)",
     selector : "plate",
     syntax : "A",
@@ -16,7 +16,7 @@ var levels = [
     `
   },
   {
-    doThis : "选中这些“饭盒”(bento box)",
+    doThis : "选中这些“便当盒”(bento box)",
     selector : "bento",
     syntax : "A",
     helpTitle : "根据类型来选择元素",
@@ -35,7 +35,7 @@ var levels = [
   {
     doThis : "选中那个“花边盘子”(fancy plate)",
     selector : "#fancy",
-    selectorName: "ID Selector",
+    selectorName: "ID 选择器(ID Selector)",
     helpTitle: "根据元素的 ID 选择元素",
     syntax: "#id",
     help : '通过指定的<strong>id</strong>来选择元素，你也可以将它和类型选择器结合起来使用。',
@@ -52,13 +52,13 @@ var levels = [
   {
     helpTitle: "选择一个在另一个元素之中的元素",
     selectorName : "后代选择器(Descendant Selector)",
-    doThis : "选中盘子(plate)里的那个苹果(apple)",
+    doThis : "选中“盘子”(plate)里的那个“苹果”(apple)",
     selector : "plate apple",
     syntax: "A&nbsp;&nbsp;B",
     help : "选中所有 <strong>A</strong> 元素之中的 <strong>B</strong> 元素。<strong>B</strong> 在另一个元素之中，所以我们把它叫做“后代”。",
     examples : [
       '<strong>p&nbsp;&nbsp;strong</strong> 选择所有 <tag>p</tag> 元素之中的 <tag>strong</tag> 元素。',
-      '<strong>#fancy&nbsp;&nbsp;span</strong> 选择 <strong>id="fancy"</strong> 之中的所有 <tag>span</tag> 元素',
+      '<strong>#fancy&nbsp;&nbsp;span</strong> 选择 <strong>id="fancy"</strong> 之中的所有 <tag>span</tag> 元素。',
     ],
     boardMarkup : `
     <bento/>
@@ -73,7 +73,7 @@ var levels = [
     selector : "#fancy pickle",
     helpTitle: "结合类选择器和 ID 选择器",
     syntax: "#id&nbsp;&nbsp;A",
-    help : '后代选择器可以用来结合任意选择器',
+    help : '后代选择器可以用来结合任意选择器。',
     examples : [
       '<strong>#cool&nbsp;span</strong> 选择 <strong>id="cool"</strong> 中的所有 <tag>span</tag> 元素。'
     ],
@@ -90,14 +90,14 @@ var levels = [
     `
   },
   {
-    doThis : "Select the small apples",
+    doThis : "选中那些“小”(small)“苹果”(apple)",
     selector : ".small",
-    selectorName: "Class Selector",
-    helpTitle: "Select elements by their class",
+    selectorName: "类选择器(Class Selector)",
+    helpTitle: "根据元素的类来选择元素",
     syntax: ".classname",
-    help : 'The class selector selects all elements with that class attribute. Elements can only have one ID, but many classes.',
+    help : '类选择器可以选中具有相应类的所有元素，每个元素只能有一个 ID ，但可以有多个类。',
     examples : [
-    '<strong>.neato</strong> selects all elements with <strong>class="neato"</strong>'
+    '<strong>.neato</strong> 选择所有具有这样属性的元素： <strong>class="neato"</strong> 。'
     ],
     boardMarkup : `
     <apple/>
@@ -109,14 +109,14 @@ var levels = [
     `
   },
   {
-    doThis : "Select the small oranges",
+    doThis : "选中那些“小”(small)“橘子”(orange)",
     selector : "orange.small",
-    helpTitle: "Combine the Class Selector",
+    helpTitle: "结合类选择器",
     syntax: "A.className",
-    help : 'You can combine the class selector with other selectors, like the type selector.',
+    help : '你可以将类选择器与其他选择器（如类型选择器）结合。',
     examples : [
-      '<strong>ul.important</strong> selects all <tag>ul</tag> elements that have <strong>class="important"</strong>',
-      '<strong>#big.wide</strong> selects all elements with <strong>id="big"</strong> that also have <strong>class="wide"</strong>'
+      '<strong>ul.important</strong> 选择所有具有这样属性的 <tag>ul</tag> 元素： <strong>class="important"</strong> 。',
+      '<strong>#big.wide</strong> 选择了同时具有 <strong>id="big"</strong> 和 <strong>class="wide"</strong> 这两个属性的元素。'
     ],
     boardMarkup :`
     <apple/>
@@ -132,11 +132,11 @@ var levels = [
     </plate>`
   },
   {
-    doThis : "Select the small oranges in the bentos",
+    doThis : "选中那些“便当”(bento)里的“小”(small)“橘子”(orange)",
     selector : "bento orange.small",
-    syntax: "Put your back into it!",
-    helpTitle: "You can do it...",
-    help : 'Combine what you learned in the last few levels to solve this one!',
+    syntax: "好好想想，加油！",
+    helpTitle: "你可以的……",
+    help : '结合你之前这些关学到的知识干掉它！',
     boardMarkup : `
     <bento>
       <orange/>
@@ -154,15 +154,15 @@ var levels = [
     `
   },
   {
-    doThis : "Select all the plates and bentos",
+    doThis : "选中所有的“盘子”(plate)和便当(bento)",
     selector : "plate,bento",
-    selectorName : "Comma Combinator",
-    helpTitle: "Combine, selectors, with... commas!",
+    selectorName : "逗号结合器(Comma Combinator)",
+    helpTitle: "用逗号……把选择器……结合起来！",
     syntax : "A, B",
-    help : 'Thanks to Shatner technology, this selects all <strong>A</strong> and <strong>B</strong> elements. You can combine any selectors this way, and you can specify more than two.',
+    help : '多亏了 Shatner 的黑科技，这个选择器可以选中所有的 <strong>A</strong> 元素和 <strong>B</strong> 元素。你可以用这种办法结合任意的选择器，两个以上也是可以的。',
     examples: [
-    '<strong>p, .fun</strong> selects all <tag>p</tag> elements as well as all elements with <strong>class="fun"</strong>',
-    '<strong>a, p, div</strong> selects all <tag>a</tag>, <tag>p</tag> and <tag>div</tag> elements'
+    '<strong>p, .fun</strong> 选择了所有的 <tag>p</tag> 元素以及所有这样的元素： <strong>class="fun"</strong> 。',
+    '<strong>a, p, div</strong> 选择了所有的 <tag>a</tag> 、 <tag>p</tag> 和 <tag>div</tag> 元素。'
     ],
     boardMarkup : `
     <pickle class="small"/>
