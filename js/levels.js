@@ -41,7 +41,7 @@ var levels = [
     help : '通过指定的<strong>id</strong>来选择元素，你也可以将它和类型选择器结合起来使用。',
     examples : [
       '<strong>#cool</strong> 选择具有这样属性的元素： <strong>id="cool"</strong> 。',
-      '<strong>ul#long</strong> 选择了 <tag>ul id="long"</tag> 。'
+      '<strong>ul#long</strong> 选择 <tag>ul id="long"</tag> 。'
     ],
     boardMarkup : `
     <plate id="fancy"/>
@@ -55,7 +55,7 @@ var levels = [
     doThis : "选中“盘子”(plate)里的那个“苹果”(apple)",
     selector : "plate apple",
     syntax: "A&nbsp;&nbsp;B",
-    help : "选中所有 <strong>A</strong> 元素之中的 <strong>B</strong> 元素。<strong>B</strong> 在另一个元素之中，所以我们把它叫做“后代”。",
+    help : "选中所有 <strong>A</strong> 元素之中的 <strong>B</strong> 元素。<strong>B</strong> 在另一个元素之中，所以我们把它叫做“后代(descendant)”。",
     examples : [
       '<strong>p&nbsp;&nbsp;strong</strong> 选择所有 <tag>p</tag> 元素之中的 <tag>strong</tag> 元素。',
       '<strong>#fancy&nbsp;&nbsp;span</strong> 选择 <strong>id="fancy"</strong> 之中的所有 <tag>span</tag> 元素。',
@@ -71,11 +71,11 @@ var levels = [
   {
     doThis : "选中“花边盘子”(fancy plate)里的那块“酸黄瓜”(pickle)",
     selector : "#fancy pickle",
-    helpTitle: "结合类选择器和 ID 选择器",
+    helpTitle: "结合后代选择器和 ID 选择器",
     syntax: "#id&nbsp;&nbsp;A",
     help : '后代选择器可以用来结合任意选择器。',
     examples : [
-      '<strong>#cool&nbsp;span</strong> 选择 <strong>id="cool"</strong> 中的所有 <tag>span</tag> 元素。'
+      '<strong>#cool&nbsp;span</strong> 选择具有 <strong>id="cool"</strong> 这个属性的元素中，的所有 <tag>span</tag> 元素。'
     ],
     boardMarkup : `
     <bento>
@@ -93,7 +93,7 @@ var levels = [
     doThis : "选中那些“小”(small)“苹果”(apple)",
     selector : ".small",
     selectorName: "类选择器(Class Selector)",
-    helpTitle: "根据元素的类来选择元素",
+    helpTitle: "根据元素的类(class)来选择元素",
     syntax: ".classname",
     help : '类选择器可以选中具有相应类的所有元素，每个元素只能有一个 ID ，但可以有多个类。',
     examples : [
@@ -116,7 +116,7 @@ var levels = [
     help : '你可以将类选择器与其他选择器（如类型选择器）结合。',
     examples : [
       '<strong>ul.important</strong> 选择所有具有这样属性的 <tag>ul</tag> 元素： <strong>class="important"</strong> 。',
-      '<strong>#big.wide</strong> 选择了同时具有 <strong>id="big"</strong> 和 <strong>class="wide"</strong> 这两个属性的元素。'
+      '<strong>#big.wide</strong> 选择同时具有 <strong>id="big"</strong> 和 <strong>class="wide"</strong> 这两个属性的元素。'
     ],
     boardMarkup :`
     <apple/>
@@ -161,8 +161,8 @@ var levels = [
     syntax : "A, B",
     help : '多亏了 Shatner 的黑科技，这个选择器可以选中所有的 <strong>A</strong> 元素和 <strong>B</strong> 元素。你可以用这种办法结合任意的选择器，两个以上也是可以的。',
     examples: [
-    '<strong>p, .fun</strong> 选择了所有的 <tag>p</tag> 元素以及所有这样的元素： <strong>class="fun"</strong> 。',
-    '<strong>a, p, div</strong> 选择了所有的 <tag>a</tag> 、 <tag>p</tag> 和 <tag>div</tag> 元素。'
+    '<strong>p, .fun</strong> 选择所有的 <tag>p</tag> 元素以及所有这样的元素： <strong>class="fun"</strong> 。',
+    '<strong>a, p, div</strong> 选择所有的 <tag>a</tag> 、 <tag>p</tag> 和 <tag>div</tag> 元素。'
     ],
     boardMarkup : `
     <pickle class="small"/>
@@ -181,14 +181,14 @@ var levels = [
     `
   },
   {
-    doThis : "Select all the things!",
+    doThis : "选中所有的东西！",
     selector : "*",
-    selectorName:  "The Universal Selector",
-    helpTitle: "You can select everything!",
+    selectorName:  "全局选择器(The Universal Selector)",
+    helpTitle: "选中所有的元素！",
     syntax : "*",
-    help : 'You can select all elements with the universal selector! ',
+    help : '你可以用全局选择器选择所有的元素！',
     examples : [
-      '<strong>p *</strong> selects any element inside all <tag>p</tag> elements.',
+      '<strong>p *</strong> 选择 <tag>p</tag> 元素中的所有元素。',
     ],
     boardMarkup : `
     <apple/>
@@ -203,14 +203,14 @@ var levels = [
     `
   },
   {
-    doThis : "Select everything on a plate",
+    doThis : "选中“盘子”(plate)中的所有东西",
     selector : "plate *",
     syntax : "A&nbsp;&nbsp;*",
-    helpTitle: "Combine the Universal Selector",
-    help : 'This selects all elements inside of <strong>A</strong>.',
+    helpTitle: "结合全局选择器",
+    help : '这个选择器可以选择 <strong>A</strong> 元素中的所有元素。',
     examples : [
-      '<strong>p *</strong> selects every element inside all <tag>p</tag> elements.',
-      '<strong>ul.fancy *</strong> selects every element inside all <tag>ul class="fancy"</tag> elements.'
+      '<strong>p *</strong> 选择所有 <tag>p</tag> 中的每个元素。',
+      '<strong>ul.fancy *</strong> 选择所有 <tag>ul class="fancy"</tag> 中的每个元素。'
     ],
     boardMarkup: `
     <plate id="fancy">
