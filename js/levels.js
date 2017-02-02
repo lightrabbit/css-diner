@@ -633,14 +633,14 @@ var levels = [
     `
   },
   {
-    selectorName: "Attribute Ends With Selector",
-    helpTitle: "Select all elements with an attribute value that ends with specific characters",
-    doThis : "Select the items for names that end with 'ato'",
+    selectorName: "属性结尾选择器",
+    helpTitle: "查找所有节点中的一个属性的内容匹配它对应的文件名结尾",
+    doThis : "查找列表中for属性名结尾为'ato'的节点",
     selector : '[for$="ato"]',
     syntax: '[attribute$="value"]',
     help : '',
     examples : [
-      '<strong>img[src$=".jpg"]</strong> selects all images display a <strong>.jpg</strong> image.',
+      '<strong>img[src$=".jpg"]</strong> 查找所有图片中结尾显示为  <strong>.jpg</strong> 的图片.',
     ],
     boardMarkup:`
     <apple class="small"/>
