@@ -228,7 +228,7 @@ var levels = [
     doThis : "Select every apple that's next to a plate",
     selector : "plate + apple",
     helpTitle: "Select an element that directly follows another element",
-    selectorName: "Adjacent Sibling Selector",
+    selectorName: "相邻兄弟选择器",
     syntax : "A + B",
     help : "This selects all <strong>B</strong> elements that directly follow <strong>A</strong>. Elements that follow one another are called siblings. They're on the same level, or depth. <br/><br/>In the HTML markup for this level, elements that have the same indentation are siblings.",
     examples : [
@@ -248,14 +248,14 @@ var levels = [
     `
   },
   {
-    selectorName: "General Sibling Selector",
-    helpTitle: "Select elements that follows another element",
+    selectorName: "通用兄弟选择器",
+    helpTitle: "选择跟在其它元素之后的元素",
     syntax: "A ~ B",
-    doThis : "Select the pickles beside the bento",
+    doThis : "选择“便当”后面的“酸黄瓜”",
     selector : "bento ~ pickle",
-    help : "You can select all siblings of an element that follow it. This is like the Adjacent Selector (A + B) except it gets all of the following elements instead of one.",
+    help : "你可以选择所有跟随在一个元素之后的所有的兄弟元素。这和相邻兄弟选择器 (A + B) 类似，但是它获取的是随后的所有元素，而不仅仅是只获取一个。",
     examples : [
-      '<strong>A ~ B</strong> selects all <strong>B</strong> that follow a <strong>A</strong>'
+      '<strong>A ~ B</strong> 选择全部在 <strong>A</strong> 后面的 <strong>B</strong>'
     ],
     boardMarkup : `
     <pickle/>
@@ -273,14 +273,14 @@ var levels = [
     `
   },
   {
-    selectorName: "Child Selector",
-    syntax: "A > B&nbsp;",
-    doThis : "Select the apple directly on a plate",
+    selectorName: "子选择器",
+    syntax: "A > B",
+    doThis : "选择直接放在盘子上的苹果",
     selector : "plate > apple",
-    helpTitle: "Select direct children of an element",
-    help : "You can select elements that are direct children of other elements. A child element is any element that is nested directly in another element. <br><br>Elements that are nested deeper than that are called descendant elements.",
+    helpTitle: "选择元素的直接子元素",
+    help : "你可以选择别的元素的直接子元素。子元素是直接嵌套于别的元素下一级的元素。<br><br>比这个嵌套得更深的元素被称为“后代元素”。",
     examples : [
-      '<strong>A > B</strong> selects all <strong>B</strong> that are a direct children <strong>A</strong>'
+      '<strong>A > B</strong> 选择所有父元素为 <strong>A</strong> 的 <strong>B</strong>'
     ],
     boardMarkup: `
     <plate>
