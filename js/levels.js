@@ -1,11 +1,11 @@
 var levels = [
   {
-    helpTitle : "Select elements by their type",
+    helpTitle : "根据类型(type)来选择元素(element)",
     selectorName : "类型选择器",
-    doThis : "Select the plates",
+    doThis : "选中这些“盘子”(plate)",
     selector : "plate",
     syntax : "A",
-    help : "Selects all elements of type <strong>A</strong>. Type refers to the type of tag, so <tag>div</tag>, <tag>p</tag> and <tag>ul</tag> are all different element types.",
+    help : "选中所有类型为 <strong>A</strong> 的元素。这里的“类型”即指标签(tag)的类型，也就是说， <tag>div</tag> 、 <tag>p</tag> 和 <tag>ul</tag> 都是不同的元素类型。",
     examples : [
       '<strong>div</strong> 选择所有的 <tag>div</tag> 元素。',
       '<strong>p</strong> 选择所有的 <tag>p</tag> 元素。',
@@ -16,15 +16,15 @@ var levels = [
     `
   },
   {
-    doThis : "Select the bento boxes",
+    doThis : "选中这些“饭盒”(bento box)",
     selector : "bento",
     syntax : "A",
-    helpTitle : "Select elements by their type",
-    selectorName : "Type Selector",
-    help : "Selects all elements of type <strong>A</strong>. Type refers to the type of tag, so <tag>div</tag>, <tag>p</tag> and <tag>ul</tag> are all different element types.",
+    helpTitle : "根据类型来选择元素",
+    selectorName : "类型选择器",
+    help : "选中所有类型为 <strong>A</strong> 的元素。这里的“类型”即指标签的类型，也就是说， <tag>div</tag> 、 <tag>p</tag> 和 <tag>ul</tag> 都是不同的元素类型。",
     examples : [
-      '<strong>div</strong> selects all <tag>div</tag> elements.',
-      '<strong>p</strong> selects all <tag>p</tag> elements.',
+      '<strong>div</strong> 选择所有的 <tag>div</tag> 元素。',
+      '<strong>p</strong> 选择所有的 <tag>p</tag> 元素。',
     ],
     boardMarkup: `
     <bento/>
@@ -33,15 +33,15 @@ var levels = [
     `
   },
   {
-    doThis : "Select the fancy plate",
+    doThis : "选中那个“花边盘子”(fancy plate)",
     selector : "#fancy",
     selectorName: "ID Selector",
-    helpTitle: "Select elements with an ID",
+    helpTitle: "根据元素的 ID 选择元素",
     syntax: "#id",
-    help : '通过指定的<strong>id</strong>来选择元素. You can also combine the ID selector with the type selector.',
+    help : '通过指定的<strong>id</strong>来选择元素，你也可以将它和类型选择器结合起来使用。',
     examples : [
-      '<strong>#cool</strong> selects any element with <strong>id="cool"</strong>',
-      '<strong>ul#long</strong> selects <tag>ul id="long"</tag>'
+      '<strong>#cool</strong> 选择具有这样属性的元素： <strong>id="cool"</strong> 。',
+      '<strong>ul#long</strong> 选择了 <tag>ul id="long"</tag> 。'
     ],
     boardMarkup : `
     <plate id="fancy"/>
@@ -50,15 +50,15 @@ var levels = [
     `
   },
   {
-    helpTitle: "Select an element inside another element",
-    selectorName : "Descendant Selector",
-    doThis : "Select the apple on the plate",
+    helpTitle: "选择一个在另一个元素之中的元素",
+    selectorName : "后代选择器(Descendant Selector)",
+    doThis : "选中盘子(plate)里的那个苹果(apple)",
     selector : "plate apple",
     syntax: "A&nbsp;&nbsp;B",
-    help : "Selects all <strong>B</strong> inside of <strong>A</strong>. <strong>B</strong> is called a descendant because it is inside of another element.",
+    help : "选中所有 <strong>A</strong> 元素之中的 <strong>B</strong> 元素。<strong>B</strong> 在另一个元素之中，所以我们把它叫做“后代”。",
     examples : [
-      '<strong>p&nbsp;&nbsp;strong</strong> selects all <tag>strong</tag> elements that are inside of any <tag>p</tag>',
-      '<strong>#fancy&nbsp;&nbsp;span</strong> selects any <tag>span</tag> elements that are inside of the element with <strong>id="fancy"</strong>',
+      '<strong>p&nbsp;&nbsp;strong</strong> 选择所有 <tag>p</tag> 元素之中的 <tag>strong</tag> 元素。',
+      '<strong>#fancy&nbsp;&nbsp;span</strong> 选择 <strong>id="fancy"</strong> 之中的所有 <tag>span</tag> 元素',
     ],
     boardMarkup : `
     <bento/>
@@ -69,13 +69,13 @@ var levels = [
     `
   },
   {
-    doThis : "Select the pickle on the fancy plate",
+    doThis : "选中“花边盘子”(fancy plate)里的那块“酸黄瓜”(pickle)",
     selector : "#fancy pickle",
-    helpTitle: "Combine the Descendant & ID Selectors",
+    helpTitle: "结合类选择器和 ID 选择器",
     syntax: "#id&nbsp;&nbsp;A",
-    help : 'You can combine any selector with the descendent selector.',
+    help : '后代选择器可以用来结合任意选择器',
     examples : [
-      '<strong>#cool&nbsp;span</strong> selects all <tag>span</tag> elements that are inside of elements with <strong>id="cool"</strong>'
+      '<strong>#cool&nbsp;span</strong> 选择 <strong>id="cool"</strong> 中的所有 <tag>span</tag> 元素。'
     ],
     boardMarkup : `
     <bento>
