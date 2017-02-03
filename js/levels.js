@@ -477,11 +477,11 @@ var levels = [
   },
   {
     selectorName: "类型选择器（Only of Type Selector）",
-    helpTitle: "选择是唯一的元素是否为父元素内的类型Select elements that are the only ones of their type within of their parent element",
+    helpTitle: "选择的父元素内是否只有唯一的子元素",
     selector : "apple:only-of-type",
     syntax: ":only-of-type",
-    doThis : "选择在盘子（plate）中的苹果（apple）",
-    help : "选择一个元素中的另一个类型元素.",
+    doThis : "选择在盘子（plate）中只有一个苹果（apple）",
+    help : "选择的元素中子元素是否唯一.",
     examples : [
       '<strong>p span:only-of-type</strong> 查找<tag>span</tag> 在任何 <tag>p</tag> 如果它是唯一的 <tag>span</tag> 在那里.'
     ],
