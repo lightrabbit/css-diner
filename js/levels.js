@@ -248,14 +248,14 @@ var levels = [
     `
   },
   {
-    selectorName: "通用兄弟选择器",
+    selectorName: "通用兄弟选择器(General Sibling Selector)",
     helpTitle: "选择跟在其它元素之后的元素",
     syntax: "A ~ B",
-    doThis : "选择“便当”后面的“酸黄瓜”",
+    doThis : "选择“便当”(bento)后面的“酸黄瓜”(pickle)",
     selector : "bento ~ pickle",
     help : "你可以选择所有跟随在一个元素之后的所有的兄弟元素。这和相邻兄弟选择器 (A + B) 类似，但是它获取的是随后的所有元素，而不仅仅是只获取一个。",
     examples : [
-      '<strong>A ~ B</strong> 选择全部在 <strong>A</strong> 后面的 <strong>B</strong>'
+      '<strong>A ~ B</strong> 选择所有在 <strong>A</strong> 后面的 <strong>B</strong>。'
     ],
     boardMarkup : `
     <pickle/>
@@ -273,12 +273,12 @@ var levels = [
     `
   },
   {
-    selectorName: "子选择器",
+    selectorName: "子选择器(Child Selector)",
     syntax: "A > B",
-    doThis : "选择直接放在盘子上的苹果",
+    doThis : "选择直接放在“盘子”(plate)上的“苹果”(apple)",
     selector : "plate > apple",
     helpTitle: "选择元素的直接子元素",
-    help : "你可以选择别的元素的直接子元素。子元素是直接嵌套于别的元素下一级的元素。<br><br>比这个嵌套得更深的元素被称为“后代元素”。",
+    help : "你可以选择别的元素的直接子元素。子元素(child element)是直接嵌套(nest)于别的元素下一级的元素。<br><br>比这个嵌套得更深的元素被称为“后代元素(descendant elements)”。",
     examples : [
       '<strong>A > B</strong> 选择所有父元素为 <strong>A</strong> 的 <strong>B</strong>'
     ],
@@ -297,17 +297,17 @@ var levels = [
     `
   },
   {
-    selectorName: "First Child Pseudo-selector",
-    helpTitle: "Select a first child element inside of another element",
-    doThis : "Select the top orange",
+    selectorName: "伪元素选择器：第一个子元素(First Child Pseudo-selector)",
+    helpTitle: "选择在某个元素之内的第一个子元素",
+    doThis : "选中“最上面的”(top)“橘子”(orange)",
     selector : "plate :first-child",
     syntax: ":first-child",
 
-    help : "You can select the first child element. A child element is any element that is directly nested in another element. You can combine this pseudo-selector with other selectors.",
+    help : "你可以用这个选择第一个子元素。所谓子元素(Child element)，就是直接嵌套于另一个元素的元素。你可以把伪元素选择器(Pseudo-selector)和其他选择器结合起来使用。",
     examples : [
-      '<strong>:first-child</strong> selects all first child elements.',
-      '<strong>p:first-child</strong> selects all first child <tag>p</tag> elements.',
-      '<strong>div p:first-child</strong> selects all first child <tag>p</tag> elements that are in a <tag>div</tag>.'
+      '<strong>:first-child</strong> 选择所有第一个的子元素。',
+      '<strong>p:first-child</strong> 选择所有 <tag>p</tag> 标签的第一个子元素。',
+      '<strong>div p:first-child</strong> 选择所有 <tag>div</tag> 标签的子元素中第一个 <tag>p</tag> 元素。'
     ],
     boardMarkup :`
     <bento/>
@@ -321,15 +321,15 @@ var levels = [
     `
   },
   {
-    selectorName: "Only Child Pseudo-selector",
-    helpTitle: "Select an element that are the only element inside of another one.",
-    doThis : "Select the apple and the pickle on the plates",
+    selectorName: "伪元素选择器：唯一子元素(Only Child Pseudo-selector)",
+    helpTitle: "选择这样的元素：它（们）是另外一个元素中的唯一一个元素",
+    doThis : "选中盘子(plate)中的苹果(apple)和酸黄瓜(pickle)",
     selector : "plate :only-child",
     syntax: ":only-child",
-    help : "You can select any element that is the only element inside of another one.",
+    help : "你可以选择这样的元素：它（们）是另外一个元素中的唯一一个元素。",
     examples : [
-      '<strong>span:only-child</strong> selects the <tag>span</tag> elements that are the only child of some other element.',
-      '<strong>ul li:only-child</strong> selects the only <tag>li</tag> element that are in a <tag>ul</tag>.'
+      '<strong>span:only-child</strong> 选择那些在另外一些元素中唯一的 <tag>span</tag> 元素。',
+      '<strong>ul li:only-child</strong> 选择那些在 <tag>ul</tag> 元素中唯一的 <tag>li</tag> 元素。'
     ],
     boardMarkup : `
     <plate>
@@ -349,16 +349,16 @@ var levels = [
     `
   },
   {
-    selectorName: "Last Child Pseudo-selector",
-    helpTitle: "Select the last element inside of another element",
-    doThis : "Select the small apple and the pickle",
+    selectorName: "伪元素选择器：最后一个子元素(Last Child Pseudo-selector)",
+    helpTitle: "选中这样一些元素：它（们）是另一个元素中的最后一个子元素",
+    doThis : "选中“小的”(small)“苹果”(apple)和“酸黄瓜”(pickle)",
     selector : ".small:last-child",
     syntax: ":last-child",
-    help : "You can use this selector to select an element that is the last child element inside of another element. <br><br>Pro Tip &rarr; In cases where there is only one element, that element counts as the first-child, only-child and last-child!",
+    help : "你可以选择这样的元素：它（们）是另一个元素中的最后一个子元素 <br><br>提示 &rarr; 在那些只有一个元素的情况下，你把这个元素看作是第一个元素(first-child)、(only-child) 或是 (last-child) 都是可以的！",
     examples : [
-      '<strong>:last-child</strong> selects all last-child elements.',
-      '<strong>span:last-child</strong> selects all last-child <tag>span</tag> elements.',
-      '<strong>ul li:last-child</strong> selects the last <tag>li</tag> elements inside of any <tag>ul</tag>.'
+      '<strong>:last-child</strong> 选择所有作为最后一个子元素出现的元素。',
+      '<strong>span:last-child</strong> 选择所有元素中的最后一个 <tag>span</tag> 元素。',
+      '<strong>ul li:last-child</strong> 选择所有 <tag>ul</tag> 元素中的最后一个 <tag>li</tag> 元素。'
     ],
     boardMarkup : `
     <plate id="fancy">
@@ -372,15 +372,15 @@ var levels = [
     <pickle class="small"/>`
   },
   {
-    selectorName: "Nth Child Pseudo-selector",
-    helpTitle: "Select an element by its order in another element",
-    doThis : "Select the 3rd plate",
+    selectorName: "伪元素选择器：第 N 个 元素(Nth Child Pseudo-selector)",
+    helpTitle: "通过元素在其父元素中的顺序来选择元素。",
+    doThis : "选中第三个“盘子”(plate)",
     selector : ":nth-child(3)",
     syntax: ":nth-child(A)",
-    help : "Selects the <strong>nth</strong> (Ex: 1st, 3rd, 12th etc.) child element in another element.",
+    help : "选中在另一元素中的第 n 个 (<strong>nth</strong>) (如: 第一个(1st), 第三个(3rd), 第十二个(12th) 等) 元素。",
     examples : [
-      '<strong>:nth-child(8)</strong> selects every element that is the 8th child of another element.',
-      '<strong>div p:nth-child(2)</strong> selects the second <strong>p</strong> in every <strong>div</strong>',
+      '<strong>:nth-child(8)</strong> 选中每个元素中的第八个元素。',
+      '<strong>div p:nth-child(2)</strong> 选中每个 <strong>div</strong> 中的第二个 <strong>p</strong> 元素。',
     ],
     boardMarkup : `
     <plate/>
@@ -390,14 +390,14 @@ var levels = [
     `
   },
   {
-    selectorName: "Nth Last Child Selector",
-    helpTitle: "Select an element by its order in another element, counting from the back",
-    doThis : "Select the 1st bento",
+    selectorName: "倒数第 N 个元素选择器(Nth Last Child Selector)",
+    helpTitle: "根据元素在其父元素中倒数的顺序来选择元素。",
+    doThis : "选中第一个便当(bento)",
     selector : "bento:nth-last-child(3)",
     syntax: ":nth-last-child(A)",
-    help : "Selects the children from the bottom of the parent. This is like nth-child, but counting from the back!",
+    help : "从下往上选择子元素，这与 nth-child 很类似，但请注意是倒数！",
     examples : [
-      '<strong>:nth-last-child(2)</strong> selects all second-to-last child elements.'
+      '<strong>:nth-last-child(2)</strong> 选择倒数第二个子元素。'
     ],
     boardMarkup: `
     <plate/>
@@ -411,14 +411,14 @@ var levels = [
     `
   },
   {
-    selectorName: "First of Type Selector",
-    helpTitle: "Select the first element of a specific type",
-    doThis : "Select first apple",
+    selectorName: "“第一个某类”选择器(First of Type Selector)",
+    helpTitle: "选择第一个出现的某种类型的元素",
+    doThis : "选中第一个“苹果”(apple)",
     selector : "apple:first-of-type",
     syntax: ":first-of-type",
-    help : "Selects the first element of that type within another element.",
+    help : "选择其他元素中的第一个某种元素。",
     examples : [
-      '<strong>span:first-of-type</strong> selects the first <tag>span</tag> in any element.'
+      '<strong>span:first-of-type</strong> 选择任意元素中的第一个 <tag>span</tag> 元素。'
     ],
     boardMarkup: `
     <orange class="small"/>
@@ -433,14 +433,14 @@ var levels = [
     `
   },
   {
-    selectorName: "Nth of Type Selector",
-    doThis: "Select all even plates",
+    selectorName: "“第 N 个某类”选择器(Nth of Type Selector)",
+    doThis: "选中所有第偶数个的盘子(plate)",
     selector: "plate:nth-of-type(even)",
     syntax: ":nth-of-type(A)",
-    help: "Selects a specific element based on its type and order in another element - or even or odd instances of that element.",
+    help: "选中某元素中的某个特定位置的子元素，或第奇/偶数个某种管苏",
     examples: [
-      '<strong>div:nth-of-type(2)</strong> selects the second instance of a div.',
-      '<strong>.example:nth-of-type(odd)</strong> selects all odd instances of a the example class.'
+      '<strong>div:nth-of-type(2)</strong> 选中第二个 div 实例。',
+      '<strong>.example:nth-of-type(odd)</strong> 选中含有“example”类的第偶数个元素。'
     ],
     boardMarkup : `
     <plate/>
@@ -452,13 +452,13 @@ var levels = [
     `
   },
   {
-    selectorName: "Nth-of-type Selector with Formula",
-    doThis: "Select every 2nd plate, starting from the 3rd",
+    selectorName: "带公式的“第 N 个某类”选择器(Nth-of-type Selector with Formula)",
+    doThis: "从第三个盘子(plate)开始，选中每隔一个的盘子",
     selector: "plate:nth-of-type(2n+3)",
     syntax: ":nth-of-type(An+B)",
-    help: "The nth-of-type formula selects every nth element, starting the count at a specific instance of that element.",
+    help: "这里的 nth-of-type 公式的意思是，从第 B 个某元素开始，选择每隔 (A-1) 个此元素。",
     examples: [
-      '<strong>span:nth-of-type(6n+2)</strong> selects every 6th instance of a <tag>span</tag>, starting from (and including) the second instance.'
+      '<strong>span:nth-of-type(6n+2)</strong> 从第 6 个 <tag>span</tag> 开始，每隔一个该元素就选中一个'
     ],
     boardMarkup : `
     <plate/>
@@ -480,8 +480,8 @@ var levels = [
     helpTitle: "选择的父元素内是否只有唯一的子元素",
     selector : "apple:only-of-type",
     syntax: ":only-of-type",
-    doThis : "选择在盘子（plate）中只有一个苹果（apple）",
-    help : "选择的元素中子元素是否唯一.",
+    doThis : "选择在盘子(plate)中只有一个苹果(apple)",
+    help : "选择的元素中子元素是否唯一。",
     examples : [
       '<strong>p span:only-of-type</strong> 查找<tag>span</tag> 在任何 <tag>p</tag> 如果它是唯一的 <tag>span</tag> 在那里.'
     ],
@@ -501,7 +501,7 @@ var levels = [
   {
     selectorName: "最终类型选择器（Last of Type Selector）",
     helpTitle: "查找该类型元素的最后一个",
-    doThis : "查找着后一个苹果（apple）和橘子（orange）",
+    doThis : "查找着后一个苹果(apple)和橘子(orange)",
     selector : ".small:last-of-type",
     syntax: ":last-of-type",
     help : "查找该类型元素的最后一个.记得一个类型是一个标签(tag),所以 <tag>p</tag> 和 <tag>span</tag> 是不同类型. <br><br>我知道这如果它是这个类型的最后一个那么它将会被选中.",
@@ -539,10 +539,10 @@ var levels = [
   {
     selectorName: "否定伪类选择器(Negation Pseudo-class)",
     helpTitle: "选择所有否定的不匹配选择器的元素",
-    doThis : "查找所有大苹果（apple）",
+    doThis : "查找所有大苹果(apple)",
     selector : "apple:not(.small)",
     syntax: ":not(X)",
-    help : '你可以实用这个去查找所有元素中不匹配的选择器<strong>"X"</strong>.',
+    help : '你可以使用这个去查找所有元素中不匹配的选择器<strong>"X"</strong>.',
     examples : [
       '<strong>:not(#fancy)</strong> 查找所有元素没有<strong>id="fancy"</strong>的属性.',
       '<strong>div:not(:first-child)</strong> 选择每一个div <tag>div</tag> 排除掉不是第一个子元素（first child）.',
