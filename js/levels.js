@@ -504,7 +504,7 @@ var levels = [
     doThis : "查找着后一个苹果(apple)和橘子(orange)",
     selector : ".small:last-of-type",
     syntax: ":last-of-type",
-    help : "查找该类型元素的最后一个.记得一个类型是一个标签(tag),所以 <tag>p</tag> 和 <tag>span</tag> 是不同类型. <br><br>我知道这如果它是这个类型的最后一个那么它将会被选中.",
+    help : "查找该类型元素的最后一个.记得一个类型是一个标签(tag),所以 <tag>p</tag> 和 <tag>span</tag> 是不同类型. <br><br>我觉得这也许也是在恐龙灭绝之前，选中他们中最后一种的办法。",
     examples : [
       '<strong>div:last-of-type</strong>选择最后一个 <tag>div</tag> 中的元素.',
       '<strong>p span:last-of-type</strong> 选择最后一个 <tag>span</tag> 中的每一个 <tag>p</tag>.'
@@ -601,8 +601,8 @@ var levels = [
   },
   {
     selectorName: "属性值选择器(Attribute Value Selector)",
-    helpTitle: "选择所有元素属性值相等的元素Select all elements that have a specific attribute value",
-    doThis : "查找所有Vitaly的食品Select Vitaly's meal",
+    helpTitle: "选择所有元素属性值相等的元素",
+    doThis : "查找所有Vitaly的食品",
     selector : "[for=Vitaly]",
     syntax: '[attribute="value"]',
     help : "属性选择器是一个大小写敏感, 内容完全匹配的选择器.",
